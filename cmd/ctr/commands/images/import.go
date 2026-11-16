@@ -121,7 +121,7 @@ If foobar.tar contains an OCI ref named "latest" and anonymous ref "sha256:deadb
 		defer cancel()
 
 		if !cmd.Bool("local") {
-			unsupportedFlags := []string{"discard-unpacked-layers"}
+			unsupportedFlags := []string{"discard-unpacked-layers", "sync-fs"}
 			for _, s := range unsupportedFlags {
 				if cmd.IsSet(s) {
 					return fmt.Errorf("\"--%s\" requires \"--local\" flag", s)

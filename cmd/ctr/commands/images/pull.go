@@ -103,7 +103,7 @@ command. As part of this process, we do the following:
 		defer cancel()
 
 		if !cmd.Bool("local") {
-			unsupportedFlags := []string{"max-concurrent-downloads", "print-chainid",
+			unsupportedFlags := []string{"max-concurrent-downloads", "print-chainid", "sync-fs",
 				"skip-verify", "tlscacert", "tlscert", "tlskey", // RegistryFlags
 			}
 			for _, s := range unsupportedFlags {
